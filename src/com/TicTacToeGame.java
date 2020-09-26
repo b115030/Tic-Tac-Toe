@@ -15,30 +15,9 @@ public class TicTacToeGame {
         	
         }
         }
-        //UC2
-        public void letterChoice(int choice) {
-        	
-        	if(choice==1) {
-        		this.player='X';
-        		this.comp='O';
-        	}
-        	else {
-        		this.player='O';
-        		this.comp='X';
-        	}
-        	System.out.println("your choice"+player+" computer choice "+comp);
-        	
-        }
-        
-		
-	
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
 		TicTacToeGame ttt=new TicTacToeGame();
-		System.out.println("Choose 1. X \n 2. O");
-		ttt.letterChoice(sc.nextInt());
 		ttt.createBoard();
 	}
 
