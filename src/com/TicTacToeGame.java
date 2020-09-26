@@ -1,5 +1,5 @@
 /*
- * TicTacToeGame class to play tic tac toe game;
+ * TicTacToeGame class to play Tic Tac Toe game;
  */
 import java.util.*;
 public class TicTacToeGame {
@@ -35,11 +35,26 @@ public class TicTacToeGame {
         //UC3
         public void showBoard() {
         	System.out.println(board[1] + "|" + board[2] + "|" + board[3]);
-        	System.out.println("-------");
+        	System.out.println("-----");
         	System.out.println(board[4] + "|" + board[5] + "|"+ board[6]);
-        	System.out.println("-------");
+        	System.out.println("-----");
         	System.out.println(board[7] + "|" + board[8] + "|" + board[9]);
         	
+        }
+        //UC4
+        public void playerMoves() {
+        	Scanner sc=new Scanner(System.in);
+        	System.out.println("Your move");
+        	int i = sc.nextInt();
+        	if(i >= 1 && i <= 9) {
+        		if (board[i] == '\0') 
+        		board[i] = player;
+        	else 
+        		System.out.println("position occupied");
+        	this.showBoard();
+        	}
+        	else
+        		System.out.println("Invalid position");
         }
 public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -49,7 +64,9 @@ public static void main(String[] args) {
 		tictactoe.createBoard();
 		tictactoe.letterChoice();
 		tictactoe.showBoard();
+		tictactoe.playerMoves();
 		
 	}
 
 }
+
